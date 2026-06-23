@@ -6,7 +6,7 @@ on:
   
       qapilot_project_id:
         description: "QApilot project UUID"
-        required: true
+        required: false
         type: string
 
 env:
