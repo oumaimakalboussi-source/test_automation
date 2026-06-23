@@ -60,9 +60,8 @@ jobs:
             --attachments ./test-results \
             --source "github-actions" \
             --tags "playwright,automated,ci" \
-            --description "Automated Playwright tests from commit ${{ github.sha }}"
-            echo "Ignoring QApilot exit code"
-            exit 0
+            --description "Automated Playwright tests from commit ${{ github.sha }}" || true
+            
 
       - name: Upload screenshots
         if: always()
